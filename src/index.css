@@ -6,7 +6,7 @@
 }
 
 @theme {
-    --font-principal:'mai', monospace;
+    --font-principal:'mai',Arial, Helvetica, sans-serif;
 }
 
 .fundoM {

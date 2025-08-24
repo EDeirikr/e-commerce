@@ -1,12 +1,14 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Modal from 'react-modal'
 
 // ignora o fundo quando o modal estiver aberto
- Modal.setAppElement('#root')
+Modal.setAppElement('#root')
 
 createRoot(document.getElementById('root')).render(
-  <App />
+  <>
+    <App />
+  </>
+
 )
