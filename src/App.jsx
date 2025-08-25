@@ -1,21 +1,24 @@
 import './App.css'
 import Caixa from './components/caixa'
+import Contc from './components/countcarts'
 import { useStore } from './store/store'
 
 function App() {
   const dados = useStore(estado => estado.data)
   
+
   return (
-    <>
-      <h1>desserts</h1>
-      <ul>
+    <div className='bg-[#FCF8F5] p-8 flex flex-col gap-[40px_0px]'>
+      <h1 className='font-bold text-4xl'>Desserts</h1>
+      <ul className='flex flex-col gap-[35px_0px]'>
         {dados.map((data, indice) => {
           return (
-            <Caixa key={indice} data={data} indice={indice} />
+            <Caixa key={indice} data={data} />
           )
         })}
       </ul>
-    </>
+      <Contc />
+    </div>
   )
 }
 
