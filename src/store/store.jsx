@@ -26,11 +26,8 @@ mudarCont: (name, type) => {
   }))
  
   get().alterValorF();
-    
+  get().quantItemsCont();
 },
-
-  
-
 
 alterValorF: () => set(estado => {
   let valorFINAL = 0
@@ -43,7 +40,22 @@ alterValorF: () => set(estado => {
   return { valorFinal: valorFINAL }
 }),
 
+quantItemsCont: () => set(state => {
+  let quantidade_de_items = 0
+
+  state.data.forEach(indice => {
+    
+    if (indice.count > 0) {
+      quantidade_de_items += 1
+    }
+
+  });
+
+  return { quantItems: quantidade_de_items }
+}),
+
 valorFinal: 0,
+quantItems: 0 ,
 
 data: [
 {
